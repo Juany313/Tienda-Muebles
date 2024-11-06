@@ -1,0 +1,124 @@
+html {
+    /* para que 1rem sea igual a 10px */
+    font-size: 62.5%;
+}
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* Globales */
+h1,
+h2,
+h3 {
+    font-family: "Playfair", serif;
+    margin: 0 0 5rem 0;
+}
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+/* Para que tomen el tamaño del contenedor y no se desborden */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Header y Navegación */
+.nombre-sitio {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.nombre-sitio span {
+    color: #037bc0
+}
+
+.contenedor-navegacion {
+    border-top: .1rem solid #e1e1e1;
+
+}
+.nav-principal {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.hero {
+    /* la ruta de la img es relativa a la hoja de estilos */
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55rem;
+    background-position: center center;
+}
+
+
+/* Categorías */
+.categorias{
+    padding-top: 5rem;
+}
+.categorias h2{
+    text-align: center;
+}
+.categoria a{
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.categoria a:hover {
+    background-color: #037bc0;
+    color: #FFFFFF;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Bloque Nosotros */
+.sobre-nosotros {
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/nosotros.jpg);
+    padding: 10rem 0;    
+    background-position: left center;
+    background-repeat: no-repeat;
+    /* el primero refiere a linear gradient(100%) y el segundo a la img(120rem) */
+    background-size: 100%, 100rem;
+}
+.sobre-nosotros-grid {
+    display: flex;
+    justify-content: flex-end;
+}
+.texto-nosotros{
+    flex-basis: 50%;
+    padding-left: 10rem;
+    color: #FFFFFF;
+}
